@@ -1,0 +1,51 @@
+:root {
+  --bg:        #FAF6F3;
+  --bg2:       #F5EEE9;
+  --gold:      #C9956C;
+  --gold-dim:  #F5E6DF;
+  --gold-line: #D4B5A8;
+  --sage:      #4D8A6A;
+  --sage-dim:  #E8F0EC;
+  --text:      #2C1A1A;
+  --text-mid:  #5C3D2E;
+  --text-dim:  #9E8E8E;
+  --card-bdr:  #EDD9CF;
+  --white:     #FFFFFF;
+  --radius:    16px;
+  --radius-sm: 10px;
+  --font-serif: 'Cormorant Garamond', Georgia, serif;
+  --font-sans:  'Inter', system-ui, sans-serif;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html, body, #root {
+  height: 100%;
+  background: #f5ede6;
+  color: var(--text);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+button { cursor: pointer; font-family: inherit; }
+input, textarea { font-family: inherit; }
+
+/* Phone shell — centers the app on desktop */
+.phone-shell {
+  width: 100%;
+  max-width: 430px;
+  height: 100dvh;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+  background: #f5ede6;
+}
+
+/* Legal pages — same container but freely scrollable, no fixed height */
+.phone-shell.legal-shell {
+  height: auto;
+  min-height: 100dvh;
+  overflow: visible;
+}

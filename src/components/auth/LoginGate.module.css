@@ -1,0 +1,223 @@
+.wrap {
+  position: relative;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.dimmed {
+  flex: 1;
+  overflow: hidden;
+  filter: blur(3px);
+  opacity: 0.4;
+  pointer-events: none;
+  user-select: none;
+}
+
+/* ── Bottom sheet ─────────────────────────────────────────── */
+.sheet {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(180deg, rgba(250,246,242,0.98) 0%, #f7efe8 100%);
+  border-top: 1px solid rgba(185,133,100,0.18);
+  border-radius: 28px 28px 0 0;
+  padding: 12px 24px 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0 -12px 40px rgba(80,40,20,0.10);
+  animation: slideUp 0.36s cubic-bezier(0.22, 1, 0.36, 1) both;
+  max-height: 92dvh;
+  overflow-y: auto;
+}
+
+@keyframes slideUp {
+  from { transform: translateY(100%); opacity: 0; }
+  to   { transform: translateY(0);    opacity: 1; }
+}
+
+.pill {
+  width: 36px;
+  height: 4px;
+  border-radius: 2px;
+  background: rgba(155,116,104,0.22);
+  margin-bottom: 16px;
+  flex-shrink: 0;
+}
+
+.icon {
+  font-size: 20px;
+  color: #c09070;
+  margin-bottom: 8px;
+  animation: pulse 4s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%,100% { opacity: 0.7; transform: scale(1);    }
+  50%      { opacity: 1;   transform: scale(1.15); }
+}
+
+.title {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 22px;
+  font-weight: 400;
+  font-style: italic;
+  color: #3a2820;
+  margin-bottom: 6px;
+  text-align: center;
+}
+
+.desc {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 14px;
+  line-height: 1.55;
+  color: #8a6a60;
+  margin-bottom: 18px;
+  text-align: center;
+  max-width: 300px;
+}
+
+/* ── Form ─────────────────────────────────────────────────── */
+.form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+/* First name + Last name side by side */
+.row {
+  display: flex;
+  gap: 10px;
+}
+.row .input { flex: 1; min-width: 0; }
+
+.input {
+  width: 100%;
+  padding: 12px 14px;
+  border-radius: 12px;
+  border: 1px solid rgba(185,133,100,0.30);
+  background: rgba(255,255,255,0.70);
+  font-family: 'Inter', system-ui, sans-serif;
+  font-size: 14px;
+  color: #3a2820;
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  -webkit-appearance: none;
+}
+.input::placeholder { color: #b0907e; }
+.input:focus {
+  border-color: rgba(185,133,100,0.65);
+  box-shadow: 0 0 0 3px rgba(185,133,100,0.10);
+}
+
+.error {
+  font-size: 13px;
+  color: #b85a4a;
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-style: italic;
+  text-align: center;
+  margin: 0;
+}
+
+.submitBtn {
+  width: 100%;
+  padding: 14px;
+  border-radius: 999px;
+  border: none;
+  background: linear-gradient(135deg, #c9956c, #a8715a);
+  color: #fff;
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 16px;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: opacity 0.2s;
+  margin-top: 2px;
+}
+.submitBtn:hover   { opacity: 0.88; }
+.submitBtn:disabled { opacity: 0.55; cursor: default; }
+
+/* ── Consent checkboxes ───────────────────────────────────── */
+.consents {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 4px;
+}
+
+.consentRow {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  cursor: pointer;
+}
+
+.consentRow input[type='checkbox'] {
+  width: 16px;
+  height: 16px;
+  margin-top: 2px;
+  flex-shrink: 0;
+  accent-color: #c9956c;
+  cursor: pointer;
+}
+
+.consentLabel {
+  font-family: 'Inter', system-ui, sans-serif;
+  font-size: 12px;
+  color: #8a6a60;
+  line-height: 1.55;
+}
+
+.consentLabel a {
+  color: #7a5040;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.consentError {
+  font-size: 12px;
+  color: #b85a4a;
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-style: italic;
+  padding-left: 26px;
+  margin-top: -4px;
+}
+
+/* ── Footer links ─────────────────────────────────────────── */
+.toggle {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 14px;
+  color: #9a7a6e;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.toggleBtn {
+  background: none;
+  border: none;
+  font-family: inherit;
+  font-size: inherit;
+  color: #7a5040;
+  cursor: pointer;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  padding: 0;
+}
+
+.dismiss {
+  background: none;
+  border: none;
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 14px;
+  font-style: italic;
+  color: #b0907e;
+  cursor: pointer;
+  padding: 4px;
+  transition: color 0.2s;
+}
+.dismiss:hover { color: #7a5a50; }

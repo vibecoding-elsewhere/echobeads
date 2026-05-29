@@ -1,0 +1,9 @@
+.closingNote {
+  text-align: center;
+  padding: 32px 0 8px;
+  font-family: var(--font-serif);
+  font-size: 14px;
+  color: var(--text-dim);
+  font-style: italic;
+  letter-spacing: 0.05em;
+}
