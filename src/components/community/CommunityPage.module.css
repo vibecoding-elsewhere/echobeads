@@ -36,4 +36,6 @@
   border-radius: 6px;
   transition: background 0.15s;
 }
-.likeBtn:hover { background: var(--gold-dim); }
+.likeBtn:hover  { background: var(--gold-dim); }
+.likeBtn.liked  { color: #c9956c; }
+.likeBtn.liked .heart { opacity: 1; }

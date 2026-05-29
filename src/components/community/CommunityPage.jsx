@@ -10,7 +10,7 @@ function timeAgo(iso) {
 }
 
 export default function CommunityPage() {
-  const { posts, loading, likePost } = useCommunity()
+  const { posts, loading, likedPosts, toggleLike } = useCommunity()
 
   return (
     <div className={styles.page}>
@@ -20,7 +20,9 @@ export default function CommunityPage() {
       {loading && <p className={styles.loading}>gathering echoes…</p>}
 
       <div className={styles.list}>
-        {posts.map(post => (
+        {posts.map(post => {
+          const liked = likedPosts.has(post.id)
+          return (
           <div key={post.id} className={styles.card}>
             <div className={styles.cardTop}>
               <span className={styles.badge}>{post.mood}</span>
@@ -32,12 +34,18 @@ export default function CommunityPage() {
             <p className={styles.text}>{post.content}</p>
             <div className={styles.cardFooter}>
               <span className={styles.author}>— anonymous soul</span>
-              <button className={styles.likeBtn} onClick={() => likePost(post.id)}>
-                ♡ <span>{post.likes || 0}</span>
+              <button
+                className={`${styles.likeBtn}${liked ? ' ' + styles.liked : ''}`}
+                onClick={() => toggleLike(post)}
+                aria-label={liked ? 'Unlike' : 'Like'}
+              >
+                <span className={styles.heart}>{liked ? '♥' : '♡'}</span>
+                <span>{post.likes || 0}</span>
               </button>
             </div>
           </div>
-        ))}
+          )
+        })}
 
         {!loading && posts.length === 0 && (
           <p className={styles.empty}>No echoes yet. Be the first to leave one.</p>
