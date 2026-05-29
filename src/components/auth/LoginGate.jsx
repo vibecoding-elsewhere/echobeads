@@ -150,11 +150,11 @@ export default function LoginGate({ children, title, description, onDismiss }) {
                 />
                 <span className={styles.consentLabel}>
                   I agree to the{' '}
-                  <Link to="/terms" target="_blank" rel="noopener noreferrer">
+                  <Link to="/terms">
                     Terms of Service
                   </Link>
                   {' '}and{' '}
-                  <Link to="/privacy" target="_blank" rel="noopener noreferrer">
+                  <Link to="/privacy">
                     Privacy Policy
                   </Link>
                   <span aria-hidden="true"> *</span>

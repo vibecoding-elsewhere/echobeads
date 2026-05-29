@@ -6,7 +6,7 @@ export default function TermsPage() {
 
   return (
     <div className={styles.page}>
-      <button className={styles.back} onClick={() => navigate(-1)}>
+      <button className={styles.back} onClick={() => navigate('/')}>
         <span className={styles.backArrow}>←</span> back
       </button>
 

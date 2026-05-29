@@ -10,6 +10,8 @@ export default function Footer() {
         <Link to="/terms"                className={styles.link}>Terms</Link>
         <span className={styles.dot} aria-hidden="true">·</span>
         <Link to="/community-guidelines" className={styles.link}>Community</Link>
+        <span className={styles.dot} aria-hidden="true">·</span>
+        <Link to="/contact-us"           className={styles.link}>Contact</Link>
       </nav>
       <p className={styles.wordmark}>elsewhere</p>
     </footer>

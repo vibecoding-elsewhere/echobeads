@@ -11,6 +11,7 @@ import AuthCallback              from './components/auth/AuthCallback'
 import PrivacyPage               from './components/legal/PrivacyPage'
 import TermsPage                 from './components/legal/TermsPage'
 import CommunityGuidelinesPage   from './components/legal/CommunityGuidelinesPage'
+import ContactPage               from './components/legal/ContactPage'
 import './styles/global.css'
 
 // ─────────────────────────────────────────────────────────────
@@ -56,6 +57,8 @@ export default function App() {
             element={<LegalShell><TermsPage /></LegalShell>} />
           <Route path="/community-guidelines"
             element={<LegalShell><CommunityGuidelinesPage /></LegalShell>} />
+          <Route path="/contact-us"
+            element={<LegalShell><ContactPage /></LegalShell>} />
 
           {/* All other routes — main app shell */}
           <Route path="*" element={<Shell />} />
