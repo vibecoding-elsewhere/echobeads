@@ -543,7 +543,7 @@ export default function TermsPage() {
           </p>
           <p className={styles.p}>
             <strong>Elsewhere</strong><br />
-            <strong>hello@elsewhere.app</strong>
+            <strong>elsewhereofficial.echo@gmail.com</strong>
           </p>
         </div>
 

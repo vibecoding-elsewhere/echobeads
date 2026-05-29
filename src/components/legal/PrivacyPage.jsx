@@ -64,7 +64,7 @@ export default function PrivacyPage() {
           </p>
           <p className={styles.p}>
             <strong>How do you exercise your rights?</strong> The easiest way to exercise your rights is
-            by contacting us at <strong>hello@elsewhere.app</strong>. We will consider and act upon any
+            by contacting us at <strong>elsewhereofficial.echo@gmail.com</strong>. We will consider and act upon any
             request in accordance with applicable data protection laws.
           </p>
         </div>
@@ -237,7 +237,7 @@ export default function PrivacyPage() {
             If we learn that personal information from users less than 18 years of age has been collected,
             we will deactivate the account and take reasonable measures to promptly delete such data from
             our records. If you become aware of any data we may have collected from children under age 18,
-            please contact us at <strong>hello@elsewhere.app</strong>.
+            please contact us at <strong>elsewhereofficial.echo@gmail.com</strong>.
           </p>
         </div>
 
@@ -251,7 +251,7 @@ export default function PrivacyPage() {
           <p className={styles.p}>
             <strong>Withdrawing your consent.</strong> If we are relying on your consent to process your
             personal information, you have the right to withdraw your consent at any time by contacting us
-            at <strong>hello@elsewhere.app</strong>. Please note that this will not affect the lawfulness
+            at <strong>elsewhereofficial.echo@gmail.com</strong>. Please note that this will not affect the lawfulness
             of the processing before its withdrawal.
           </p>
           <p className={styles.p}>
@@ -300,7 +300,7 @@ export default function PrivacyPage() {
           </p>
           <p className={styles.p}>
             <strong>Elsewhere</strong><br />
-            <strong>hello@elsewhere.app</strong>
+            <strong>elsewhereofficial.echo@gmail.com</strong>
           </p>
         </div>
 
@@ -316,7 +316,7 @@ export default function PrivacyPage() {
           </p>
           <p className={styles.p}>
             To request to review, update, or delete your personal information, please contact us at{' '}
-            <strong>hello@elsewhere.app</strong>. You may also delete your account directly from your
+            <strong>elsewhereofficial.echo@gmail.com</strong>. You may also delete your account directly from your
             Profile page within the app.
           </p>
         </div>
